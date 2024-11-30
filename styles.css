@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
+
+:root {
+    color-scheme: dark light;
+    --luaPink: #F5A9B8;
+    --luaDarkGrey: #1c1b22;
+
+    --fontColor: white;
+    --linkColor: var(--luaPink);
+    --bgColor: var(--luaDarkGrey);
+    --bgAccent: #2d2c35;
+    --bgSecondary: #15151a;
+    --headingColor: var(--luaPink);
+    --accentHeading: var(--luaPink);
+    --borderColor: var(--luaPink);
+}
+
+.theme-light {
+    --fontColor: white;
+    --linkColor: var(--luaDarkGrey);
+    --bgColor: var(--luaPink);
+    --bgAccent: #fabfcb;
+    --bgSecondary: #fa96aa;
+    --headingColor: white;
+    --accentHeading: var(--luaDarkGrey);
+    --borderColor: white;
+}
+
+.container {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* Small screen sizes */
+@media only screen and (max-width: 576px) {
+}
+
+/* Medium screen sizes */
+@media only screen and (min-width: 576px) and (max-width: 768px) {
+    .container {
+        max-width: 540px;
+    }
+}
+
+/* Large screen sizes */
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+    .container {
+        max-width: 720px;
+    }
+}
+
+/* XLarge screen sizes */
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+/* XXLarge screen sizes */
+@media only screen and (min-width: 1200px) and (max-width: 1400px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+
+/* XXXLarge screen sizes */
+@media only screen and (min-width: 1400px) {
+    .container {
+        max-width: 1320px;
+    }
+}
+
+a:link, a:visited {
+    color: white;
+    text-decoration: underline;
+    text-decoration-color: var(--linkColor);
+    transition: .2s;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a:active {
+    filter: brightness(130%);
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    background-color: var(--bgColor);
+    transition: .2s;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    color: var(--headingColor) !important;
+}
+
+p, li, i {
+    color: var(--fontColor);
+}
+
+.accent-heading {
+    color: var(--accentHeading) !important;
+}
+
+nav ol li:not(:first-child):before {
+    content: '/';
+    margin: 0 .5em;
+}
+
+.lua-button, .lua-button-primary {
+    border: none;
+    padding: .75rem;
+    font-size: 1rem;
+    border-radius: .5rem;
+    transition: .2s;
+    cursor: pointer;
+}
+
+a.btnLink {
+    text-decoration: none;
+}
+
+main {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer {
+    margin-top: 20px;
+    width: 100%;
+    background-color: var(--bgSecondary);
+    padding: 1.25rem 0;
+    height: 160px;
+}
+
+.footer-content-block {
+    padding-bottom: 1rem;
+}
+
+footer ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+footer h1, footer h2, footer h3, footer h4, footer h5, footer h6 {
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: normal;
+}
+
+footer p {
+    margin: 0 auto;
+}
+
+.footer-parent {
+    display: flex;
+    margin: 0 auto;
+}
+
+.footer-parent div {
+    flex: 1 1 50%;
+}
+
+footer h6 {
+    color: var(--accentHeading) !important;
+}
+
+.dictionary_definition {
+    border-left: 1px solid var(--borderColor);
+    padding-left: 1rem;
+}
+
+.landing-definition-container {
+    max-width: 960px;
+    padding-top: 2.5rem;
+}
+
+.dictionary_definition-header {
+    padding-top: .5rem;
+    display: inline-flex;
+}
+
+.dictionary_definition-header h1 {
+    font-size: 1.5rem;
+    padding-right: 1rem;
+    margin: 0;
+}
+
+.dictionary_definition-header h2 {
+    font-size: 1.25rem;
+    padding-right: .75rem;
+    margin: 0;
+}
+
+.dictionary_definition-header p {
+    padding-top: .25rem;
+    margin: 0;
+}
+
+html main {
+    height: calc(100% - 180px);
+    min-height: 350px;
+}
